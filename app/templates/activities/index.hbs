@@ -1,0 +1,9 @@
+<ul id="activity-list">
+    {{#each model as |activity|}}
+        <li>
+            <input type="checkbox" class="toggle">
+            <label>{{activity.title}}</label><button class="destroy">Destroy</button>
+        </li>
+    {{/each}}
+</ul>
+{{outlet}}
