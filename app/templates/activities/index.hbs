@@ -1,8 +1,7 @@
-<ul id="activity-list">
+<ul id="activity-list" class="list-group">
     {{#each model as |activity|}}
-        <li>
-            <input type="checkbox" class="toggle">
-            <label>{{activity.title}}</label><button class="destroy">Destroy</button>
+        <li class="list-group-item">
+            {{activity.title}}<button class="destroy btn btn-xs btn-link">Remove</button>
         </li>
     {{/each}}
 </ul>
