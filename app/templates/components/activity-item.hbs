@@ -4,5 +4,5 @@
       insert-newline=(action 'save' todo)}}
 {{else}}
     <span {{action 'editActivity' on='doubleClick'}}>{{activity.title}}</span>
-    <button class="destroy btn btn-xs btn-link">Remove</button>
+    <button {{action 'removeActivity' activity}}class="destroy btn btn-xs btn-link">Remove</button>
 {{/if}}

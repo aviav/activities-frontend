@@ -20,6 +20,10 @@ export default Ember.Component.extend({
 
       activity.set('title', title);
       activity.save();
+    },
+
+    removeActivity(activity) {
+      activity.destroyRecord();
     }
   }
 });
