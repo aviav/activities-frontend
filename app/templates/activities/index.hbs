@@ -1,8 +1,6 @@
 <ul id="activity-list" class="list-group">
     {{#each model as |activity|}}
-        <li class="list-group-item">
-            {{activity.title}}<button class="destroy btn btn-xs btn-link">Remove</button>
-        </li>
+        {{activity-item activity=activity}}
     {{/each}}
 </ul>
 {{input
