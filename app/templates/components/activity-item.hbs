@@ -3,6 +3,6 @@
       focus-out=(action 'save' todo)
       insert-newline=(action 'save' todo)}}
 {{else}}
-    <span {{action 'editActivity' on='doubleClick'}}>{{activity.title}}</span>
+    <span {{action 'editActivity' on='click'}}>{{activity.title}}</span>
     <button {{action 'removeActivity' activity}}class="destroy btn btn-xs btn-link">Remove</button>
 {{/if}}
