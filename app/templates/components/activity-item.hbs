@@ -1,7 +1,7 @@
 {{#if isEditing}}
     {{edit-activity class='edit' value=activity.title
-      focus-out=(action 'save' todo)
-      insert-newline=(action 'save' todo)}}
+      focus-out=(action 'save' activity)
+      insert-newline=(action 'save' activity)}}
 {{else}}
     <span {{action 'editActivity' on='click'}}>{{activity.title}}</span>
     <button {{action 'removeActivity' activity}}class="destroy btn btn-xs btn-link">Remove</button>
