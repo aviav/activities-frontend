@@ -1,12 +1,21 @@
-export default Ember.Controller.extend({
+import Ember from 'ember';
+
+const {
+  Component,
+  inject: { service }
+} = Ember;
+
+export default Component.extend({
+  store: service(),
+
   actions: {
-    createActivity: function() {
-      // Get the activity title set by the "New Activity" text field
-      var title = this.get('newTitle');
+    createActivity(title) {
+      let store = this.get('store');
+
       if (!title.trim()) { return; }
 
       // Create the new Activity model
-      var activity = this.store.createRecord('activity', {
+      var activity = store.createRecord('activity', {
         title: title
       });
 
